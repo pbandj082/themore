@@ -13,11 +13,11 @@ class ThemoreScope extends InheritedNotifier {
 class Themore extends StatefulWidget {
   const Themore({
     Key? key,
-    required this.themeMode,
+    this.themeMode,
     required this.child,
   }) : super(key: key);
 
-  final ThemoreThemeMode themeMode;
+  final ThemoreThemeMode? themeMode;
   final Widget child;
 
   static ThemoreTheme of(BuildContext context) {
