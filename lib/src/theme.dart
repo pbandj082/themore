@@ -2,20 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'decorators.dart';
 
-class ThemoreThemeScope extends InheritedNotifier {
-  const ThemoreThemeScope({
-    Key? key,
-    required ThemoreTheme theme,
-    required Widget child,
-  }) : super(key: key, notifier: theme, child: child);
-
-  static ThemoreTheme of(BuildContext context) {
-    return context
-        .dependOnInheritedWidgetOfExactType<ThemoreThemeScope>()!
-        .notifier as ThemoreTheme;
-  }
-}
-
 enum ThemoreThemeMode {
   darkStandard,
   lightStandard,
